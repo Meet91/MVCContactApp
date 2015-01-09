@@ -6,11 +6,12 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/bootstrap/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
     <div>
         @* Header Menu *@
-        <div class="navbar navbar-default navbar-fixed-top" >
+        <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <a href="/" class="navbar-brand">Contact Book</a>
@@ -21,17 +22,56 @@
                     </button>
                 </div>
                 <div class="navbar-collapse collapse" id="navbar-main">
-
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Add Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Export</a>
+                        </li>
+                        <li>
+                            <a href="#">Sitemap</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" target="_blank">Login</a></li>
+                        <li><a href="#" target="_blank">Register</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        @* Page Header *@
-        @* Page Body *@
-        @* Page Footer *@
-    </div>
-    @RenderBody()
 
+        <div class="container">
+            @* Page Header *@
+            <div class="page-header" id="banner">
+
+            </div>
+            @* Page Body *@
+            <div class="page-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+            @* Page Footer *@
+            <footer>
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <p>Made by <a href="#" rel="nofollow">Mitesh Patel</a> Contact at <a href="mailto:meetp.patel@gmail.com">Mitesh</a></p>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+   
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
 </body>
 </html>
